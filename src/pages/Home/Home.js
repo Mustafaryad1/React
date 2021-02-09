@@ -1,5 +1,6 @@
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCartAction, changeLanguageAction } from "../../store/actions";
+import { addToCartAction, changeLanguageAction, getUsers } from "../../store/actions/actions";
 
 export default function Home() {
 //   const lang = useSelector((state) => state.lang);
@@ -13,6 +14,11 @@ export default function Home() {
   const changeCartCount = () => {
     dispatch(addToCartAction(cartCount+1))
   }
+
+  useEffect(() => {
+    dispatch(getUsers())
+  }, [])
+
   return (
    <>
     <div>Current language is : {lang}</div>

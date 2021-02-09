@@ -2,7 +2,7 @@ import React from "react";
 import { Route , Switch } from "react-router-dom";
 import { Suspense } from "react";
 
-const Home = React.lazy(() => import("../pages/Home/Home"));
+const Home = React.lazy(() => import("../pages/Home/HomeClass"));
 const About = React.lazy(() => import("../pages/About/About"));
 const Contact = React.lazy(() => import("../pages/Contact/Contact"));
 
